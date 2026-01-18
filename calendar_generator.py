@@ -45,7 +45,8 @@ class CalendarGenerator:
 
 
     def generate_calendar(self,month,year):
-        
+        pass
+
         
 
 
