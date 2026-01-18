@@ -1,7 +1,4 @@
 class CalendarGenerator:
-    def __init__(self):
-        pass
-
     def is_leap_year(self,year):
         if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
             return True
@@ -45,11 +42,12 @@ class CalendarGenerator:
 
 
     def generate_calendar(self,month,year):
-        pass
+        print('      ',month,year)
+        print('Su Mo Tu We Th Fr Sa')
+        return self.build_grid_string(self.get_start_day_of_month(month,year),self.get_days_in_month(month,year))
 
-        
+    
 
 
-a = CalendarGenerator.get_days_in_month(1,1,2026)
-b = CalendarGenerator.get_start_day_of_month(1,1,2026)
-print(CalendarGenerator.build_grid_string(1,b,a))
+a = CalendarGenerator()
+print(a.generate_calendar(1,2026))
